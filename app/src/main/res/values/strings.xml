@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="refresh">Refresh</string>
+    <string name="location">Location</string>
+    <string name="locateMe">Locate Me</string>
+    <string name="powered_by_darksky">Powered by DarkSky</string>
+    <string name="main_temp">%1$d °C - %2$s</string>
+    <string name="humidity_string">&#xf07a; Humidity : %1$.2f</string>
+    <string name="wind_string">&#xf050; Wind : %1$.2f km/h </string>
+    <string name="main_url">https://api.darksky.net/forecast/%1$s/%2$f,%3$f</string>
+    <string name="lat_long">%1$d,%2$d</string>
+</resources>

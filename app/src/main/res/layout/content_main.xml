@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.crackjack.weatherapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <!--<TextView-->
+        <!--android:id="@+id/date_tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorPrimaryLight"-->
+        <!--android:padding="12dp"-->
+        <!--android:text="DD MM YYYY"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="24sp" />-->
+
+        <LinearLayout
+            android:id="@+id/location_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryDark"
+                android:scaleType="center"
+                android:src="@drawable/ic_location_on_24dp" />
+
+            <TextView
+                android:id="@+id/location_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimaryDark"
+                android:padding="12dp"
+                android:text="latitude , longitude"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timezone"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:text="Timezone"
+            android:textAlignment="center"
+            android:textColor="@color/whiteDark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/main_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/weather"
+                android:text="&#xf00d;"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="84sp" />
+
+
+            <TextView
+                android:id="@+id/temp_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/main_weather"
+                android:text="72° - Clear-Day"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/temp_data"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/weather"
+                android:text="&#xf07a; Humidity : "
+                android:textAlignment="center"
+                android:textColor="@color/whiteDark"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/humidity"
+                android:fontFamily="@font/weather"
+                android:text="&#xf050; Wind : "
+                android:textAlignment="center"
+                android:textColor="@color/whiteDark"
+                android:textSize="24sp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/colorPrimaryLight">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/summary_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="4dp"
+                            android:fontFamily="@font/weather"
+                            android:padding="8dp"
+                            android:text="&#xf07e;"
+                            android:textAlignment="center"
+                            android:textColor="@color/whiteDark"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:id="@+id/summary"
+                            style="@style/TextAppearance.AppCompat.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="4dp"
+                            android:gravity="center"
+                            android:minHeight="64dp"
+                            android:padding="6dp"
+                            android:text="Summary"
+                            android:textAlignment="center"
+                            android:textColor="@color/whiteDark" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:autoLink="web"
+            android:gravity="bottom"
+            android:padding="4dp"
+            android:text="@string/powered_by_darksky"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_weight="1.1"--><!--android:orientation="horizontal">-->
+
+    <!--<android.support.v7.widget.CardView--><!--android:id="@+id/card_tomorrow"--><!--android:layout_width="180dp"--><!--android:layout_height="210dp"--><!--android:layout_alignParentStart="true"--><!--android:layout_gravity="center"--><!--android:layout_marginBottom="8dp"--><!--android:layout_marginEnd="8dp"--><!--android:layout_marginStart="16dp"--><!--android:layout_marginTop="24dp"--><!--android:layout_weight="1"--><!--android:elevation="3dp"--><!--app:cardBackgroundColor="@color/colorPrimaryLight"--><!--app:cardCornerRadius="5dp">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:id="@+id/tomorrow"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:padding="10dp"--><!--android:text="DD+1 MMM YYYY"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="16sp" />-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="2dp"--><!--android:layout_below="@id/tomorrow"--><!--android:background="@color/colorAccent" />-->
+
+    <!--<TextView--><!--android:id="@+id/tom_weather"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/tomorrow"--><!--android:fontFamily="@font/weather"--><!--android:text="&#xf00d;"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="48sp" />-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/tom_weather">-->
+
+
+    <!--<TextView--><!--android:id="@+id/tom_high"--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_weight="1.2"--><!--android:text="99°"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="48sp"--><!--android:textStyle="bold" />-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_weight="0.8"--><!--android:gravity="bottom"--><!--android:text="99°"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="36sp" />-->
+
+    <!--</LinearLayout>--><!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView--><!--android:id="@+id/card_day_after"--><!--android:layout_width="180dp"--><!--android:layout_height="210dp"--><!--android:layout_alignParentEnd="true"--><!--android:layout_gravity="center"--><!--android:layout_marginBottom="8dp"--><!--android:layout_marginEnd="16dp"--><!--android:layout_marginStart="8dp"--><!--android:layout_marginTop="24dp"--><!--android:layout_weight="1"--><!--android:elevation="3dp"--><!--app:cardBackgroundColor="@color/colorPrimaryLight"--><!--app:cardCornerRadius="5dp">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+    <!--<TextView--><!--android:id="@+id/day_after_tomorrow"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:padding="10dp"--><!--android:text="DD+2 MMM YYYY"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="16sp" />-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="2dp"--><!--android:layout_below="@id/day_after_tomorrow"--><!--android:background="@color/colorAccent" />-->
+
+    <!--<TextView--><!--android:id="@+id/after_weather"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/day_after_tomorrow"--><!--android:fontFamily="@font/weather"--><!--android:text="&#xf00d;"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="48sp" />-->
+
+    <!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@id/after_weather">-->
+
+    <!--<TextView--><!--android:id="@+id/after_tom_high"--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_weight="1.2"--><!--android:text="99°"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="48sp"--><!--android:textStyle="bold" />-->
+
+    <!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="match_parent"--><!--android:layout_weight="0.8"--><!--android:gravity="bottom"--><!--android:text="99°"--><!--android:textAlignment="center"--><!--android:textColor="@color/white"--><!--android:textSize="36sp" />--><!--</LinearLayout>--><!--</RelativeLayout>--><!--</android.support.v7.widget.CardView>-->
+
+    <!--</LinearLayout>-->
